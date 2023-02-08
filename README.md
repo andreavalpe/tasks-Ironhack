@@ -138,22 +138,6 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 <!-- Presentation Link: [Insert here your presentation link](insert-link-here) -->
 
-Sobre mi puedo empezar con lo más importante, mi nombre, Hola, me llamo Andrea Valencia Perez y tengo 27 años.
-
-Soy una persona que viene de sectores totalmente diferentes de la programación, y os preguntareis porque estoy aquí, básicamente me he enamorado.
-
-La programación siempre me ha llamado la atención, pero tenía miedo de que fuera complicada, de que no estuviera echa para ello y de encallarme, pero hice un salto de la zona de confort porque al final si alguien quiere un cambio tiene que ir a por él.
-
-Definitivamente ha sido una buena decisión, aunque muchas veces creo que puedo aprender más y me frustro, busco soluciones, indago sobre la respuesta y eso me hace querer saber más, por ello me planteo seguir perfeccionando mi aprendizaje, porque, aunque este proyecto ha sido el primero, mi objetivo es mejorar poco a poco consiguiendo crecer como persona y programadora.
-
-Aquí dejo pequeños datos por si queréis contactar conmigo 😊,
-
-Andrea Valencia Perez – andreavalpe@hotmail.com
-
-Perfil GitHub - https://github.com/andreavalpe
-
-Presentación proyecto - https://prezi.com/p/edit/3ocz2oemphjb/
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
@@ -186,12 +170,6 @@ En esta sección se puede incluir información como:
 - Recomendaciones para futuros desarrolladores que trabajen en el proyecto.
 
 En resumen, la sección "desafío técnico" es una excelente manera de brindar a los usuarios y contribuidores una idea de los desafíos técnicos que se enfrentaron durante el desarrollo del proyecto, y cómo se abordaron. Esta sección también puede ser útil para futuros desarrolladores que trabajen en el proyecto, ya que les brinda información valiosa sobre problemas potenciales y soluciones para superarlos. -->
-
-Para mi el mayor reto sin duda ha sido JavaScript porque, aunque entiendo el lenguaje aún me falta practicar la lógica, no obstante, pensaba en donde quería llegar, como quería hacerlo y hacía una estructura del planteamiento para ver la mejor forma de hacerlo. Igualmente es algo que quiero perfeccionar, coger práctica y así quitarme ese miedo, por ello, después de este proyecto me he planteado ejercicios y retos para seguir trabajándolo.
-
-Asimismo, también me he dado cuenta de las limitaciones y de que mi personalidad perfeccionista ha sido un poco lastre a la hora de querer hacer la web perfecta, no obstante, eso mismo es lo que me hace querer que las cosas estén bien hechas y consigue el resultado que he obtenido, del que estoy contenta, porque visualmente es atractiva y consigue atraer a cada parte de ella.
-
-Igualmente me hubiera gustado poderla hacer responsive de manera que las cosas se ajustarán a la pantalla y no se movieran al tener un tamaño diferente al de la pantalla de mi ordenador, por tanto, será algo que me propondré para mi siguiente proyecto, demostrar mi mejoría, para que con el tiempo que se me da consiga grandes resultados.
 
 ## Grande Error
 
