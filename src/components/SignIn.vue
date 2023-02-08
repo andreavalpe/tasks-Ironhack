@@ -17,7 +17,7 @@
         <label class="input-field-label">Password</label>
         <input type="password" class="input-field" placeholder="**********" id="password" v-model="password" required />
       </div>
-      <button class="button" type="submit">Sign In</button>
+      <button id="signIn" class="button" type="submit">Sign In</button>
       <p>
         Have an account?
         <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link" />

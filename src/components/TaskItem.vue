@@ -3,7 +3,12 @@
     <h3>{{ task.title }}</h3>
     <p>{{ task.description }}</p>
     <button @click="deleteTask">Delete {{task.title}}</button>
-    <button @click="$emit('taskEdit')">Edit {{ task.title }}</button>
+    <button @click="completeTask">Completed</button>
+    <button @click ="editTask">Edit</button>
+    <div v-if="showEdit" class="editContainer">
+        <input type="text" v-model="titleModificated"/>
+        <textarea rows="10" cols="50" v-model="descriptionModificated"/>
+    </div>
 </div>
 </template>
 
@@ -23,13 +28,19 @@ const deleteTask = async() => {
     await taskStore.deleteTask(props.task.id);
 };
 
-const taskEdit = async() => {
-    await taskStore.taskEdit(props.task.id);
-}
+let showEdit = ref(false);
+
+const editTask = () => {
+    showEdit = true;
+};
 
 </script>
 
-<style></style>
+<style>
+
+@import "../assets/style.css";
+
+</style>
 
 // <!--
 // **Hints**
