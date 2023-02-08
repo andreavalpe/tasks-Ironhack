@@ -3,10 +3,10 @@ import { defineStore } from "pinia";
 import { supabase } from "../supabase";
 import { useUserStore } from "./user";
 
-// Esta tienda utiliza el Composition API
-const tasksArr = ref(null);
-
 export const useTaskStore = defineStore("tasks", () => {
+  // Esta tienda utiliza el Composition API
+  const tasksArr = ref(null);
+  // conesguir tareas de supabase
   const fetchTasks = async () => {
     const { data: tasks } = await supabase
       .from("tasks")
@@ -15,7 +15,7 @@ export const useTaskStore = defineStore("tasks", () => {
     tasksArr.value = tasks;
     return tasksArr.value;
   };
-  
+  // añadir tareas de supabase
   const addTask = async (title, description) => {
     console.log(useUserStore().user.id);
     const { data, error } = await supabase.from("tasks").insert([
@@ -27,10 +27,20 @@ export const useTaskStore = defineStore("tasks", () => {
       },
     ]);
   };
-
+  // borrar tareas de supabase
   const deleteTask = async (id) => {
     const { data, error } = await supabase.from("tasks").delete().match({
       id: id,
     });
   };
+  return { tasksArr, fetchTasks, addTask, deleteTask };
 });
+
+//editar tareas de supabase
+//  const taskEdit = async (id) => {
+//     const { data, error } = await supabase.from("tasks").upgrade().match({
+//        id: id,     
+//     });
+//   };
+//   return { tasksArr, fetchTasks, addTask, taskEdit };
+// });
