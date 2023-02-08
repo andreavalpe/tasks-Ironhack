@@ -22,14 +22,6 @@ Tener un archivo README.md bien estructurado y bien documentado también puede s
 
 <a name="readme-top"></a>
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <img src="./resources/images/readMe/wu.png" alt="Logo" width="80" height="80">
-  <h3 align="center">Circle Landing Agency Website</h3>
-  <a href="https://midterm-project.vercel.app/">Visit Website</a>
-</div>
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -61,8 +53,6 @@ Tener un archivo README.md bien estructurado y bien documentado también puede s
 <!-- ABOUT THE PROJECT -->
 
 ## Acerca del Proyecto
-
-<img src="./resources/images/readMe/screenshot.png" alt="Logo" width="100%" height="50%">
 
 La sección "sobre el proyecto" en un archivo README es una sección importante que proporciona información general sobre el objetivo y la funcionalidad del proyecto.
 
