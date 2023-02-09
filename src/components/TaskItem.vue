@@ -6,14 +6,14 @@
     <button @click="completeTask">Completed</button>
     <button @click ="editTask">Edit</button>
     <div v-if="showEdit" class="editContainer">
-        <input type="text" v-model="titleModificated"/>
-        <textarea rows="10" cols="50" v-model="descriptionModificated"/>
+        <input type="text" v-model="currentTitle"/>
+        <textarea rows="10" cols="50" v-model="currentDescription"/>
     </div>
 </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { reactive, ref } from 'vue';
 import { useTaskStore } from '../stores/task';
 import { supabase } from '../supabase';
 
@@ -28,11 +28,16 @@ const deleteTask = async() => {
     await taskStore.deleteTask(props.task.id);
 };
 
+//creamos una variable para darle un valor booleano, que en este caso lo definiremos falso para que no muestre el contenido de los input.
 let showEdit = ref(false);
 
+//se crea una función de flecha para que cambie el valor de la variable creada a true.
 const editTask = () => {
-    showEdit = true;
+    showEdit.value = true;
 };
+
+const currentTitle = ref(props.task.title.value);
+const currentDescription = ref(props.task.description.value);
 
 </script>
 

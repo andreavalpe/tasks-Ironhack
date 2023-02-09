@@ -99,19 +99,24 @@ En este punto accedemos a mi planteamiento diario para realizar cada punto del p
 
 #### Day One
 
-###### Lunes 07, Febrero 2023
+###### Lunes 06, Febrero 2023
+
+- [x] Hacer clases repasando términos de vue.
+
+
+###### Martes 07, Febrero 2023
 
 - [x] Creación de una cuenta para que los usuarios se puedan registrar mediante un Sign Up, para iniciar sesión y cerrar sesión a través del Log In y Log Out.
 
 #### Day Two
 
-###### Martes 08, Febrero 2023
+###### Miércoles 08, Febrero 2023
 
 - [ ] Gestión de tareas para que los usuarios puedan crear, editar, eliminar y marcarlas como completadas o desmarcarlas.
 
 #### Day Three
 
-###### Miercoles 09, Enero 2023
+###### Jueves 09, Enero 2023
 
 - [ ] Acabar la gestión de tareas y añadir la ventana de alerta para la eliminación de tareas.
 
