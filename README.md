@@ -116,9 +116,13 @@ En este punto accedemos a mi planteamiento diario para realizar cada punto del p
 
 #### Day Three
 
-###### Jueves 09, Enero 2023
+###### Jueves 09, Febrero 2023
 
-- [ ] Acabar la gestión de tareas y añadir la ventana de alerta para la eliminación de tareas.
+- [x] Repasar vue viendo videos y empezar a estilar en css.
+
+###### Viernes 10, Febrero 2023
+
+- [ ] Seguir con el css.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

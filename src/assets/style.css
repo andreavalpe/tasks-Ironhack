@@ -27,3 +27,29 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
+
+.signIn {
+    background: linear-gradient(to right, #16a4e6, #2121c7, #2c7bbc);
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    margin: 3%; 
+    padding: 4%; 
+    box-shadow: 5px 5px 40px;
+    border-radius: 10%;
+}
+
+.form-input{
+    border: 2px red solid;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 22px;
+    width: 40%;
+}
+
+.container {
+    border: 2px white solid;
+    width: 30%;
+}
