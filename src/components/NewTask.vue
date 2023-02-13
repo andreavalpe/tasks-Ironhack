@@ -1,6 +1,7 @@
 <template>
   <div class="posit">
       <div class="addTask">
+        <img class="iconPushpin" src="../images/pushpin.png"/>
           <h1>Add a new Task
             <div v-if="showErrorMessage" class="error-text">
                 {{ errorMessage }}
@@ -37,7 +38,7 @@ const errorMessage = ref(null);
 
 // Arrow function para crear tareas.
 const addTask = () => {
-if(name.value.length === 0 || description.value.length === 0){
+  if (name.value.length === 0 || description.value.length === 0) {
   // Primero comprobamos que ningún campo del input esté vacío y lanzamos el error con un timeout para informar al user.
 
   showErrorMessage.value = true;
@@ -46,9 +47,18 @@ if(name.value.length === 0 || description.value.length === 0){
   showErrorMessage.value = false;
   }, 5000);
 
+  //añadimos otra condición por si no tiene los carácteres necesarios
+} else if (description.value.length < 4 || name.value.length < 4) {
+
+    showErrorMessage.value = true;
+    errorMessage.value = 'You are missing a character';
+    setTimeout(() => {
+      showErrorMessage.value = false;
+    }, 5000);
+
 } else {
   // Aquí mandamos los valores a la store para crear la nueva Task. Esta parte de la función tenéis que refactorizarla para que funcione con emit y el addTask del store se llame desde Home.vue.
-
+    
   taskStore.addTask(name.value, description.value);
   name.value = '';
   description.value = '';

@@ -8,10 +8,12 @@
           <router-link to="/account">Account</router-link> -->
         </div>
         <NewTask />
-        <h1 class="addTaskSticker">Tasks:</h1>
+          <div class="addTaskSticker">
+            <h1>To do tasks:</h1>
+          </div>
         <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
+      </div>
     </div>
-  </div>
 </template>
 
 <script setup>

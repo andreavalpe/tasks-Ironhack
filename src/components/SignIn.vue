@@ -6,7 +6,7 @@
       <div class="container">
         <!-- <h3 class="header-title">Log In to ToDo App</h3> -->
         <div class="imgDiv">
-          <img class="logo" src="../images/koneko_a_cute_kawaii_dinosaur_with_sakura_petals_falling_in_the_d8711fe9-999d-457b-b535-e2b870e5d58c.png"/>
+          <img class="logo" src="../images/logo.png"/>
         </div>
         <!-- <p class="header-subtitle">Estamos en la ruta de login. Aquí deberíais crear un form con la lógica correspondiente para que este permita al usuario loguearse con su email y su contraseña. Miraros la lógica de SignUp si necesitáis inspiración :)</p>
         <p>Dont have an account? <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/></p> -->

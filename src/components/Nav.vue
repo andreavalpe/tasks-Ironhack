@@ -7,7 +7,7 @@
 
     <ul>
         <li>
-          <router-link to="/">Task Manager</router-link>
+          <router-link to="/completedTask">Completed Task</router-link>
         </li>
 
         <li>

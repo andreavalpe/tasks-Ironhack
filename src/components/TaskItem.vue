@@ -1,22 +1,41 @@
 <template>
-    <div class="container" :class="{overlay: modal}">
+    <div class="containerTask" :class="{overlay: modal}">
+        <div>
+           <button class="addImageOrColor" @click="addImageOrColor">
+            <img src="../images/plusSymbol.png"/>
+           </button> 
+        </div>
         <h3 :class="{completed: isComplete}">{{ task.title }}</h3>
         <p :class="{completed: isComplete}">{{ task.description }}</p>
-        <button @click="modal = true">Delete</button>
-        <button @click="completeTask">Completed</button>
-        <button @click ="editTask">Edit</button>
+        <div v-if="!showEdit" class="buttonEditCheckDelete">
+            <button @click="modal = true" class="delete backgroundButton">
+                <img class="buttonImg" src="../images/trashButton.png"/>
+            </button>
+            <button @click="completeTask" class="completedButton backgroundButton">
+                <img class="buttonImg" src="../images/checkButton.png"/>
+            </button>
+            <button @click ="editTask" class="edit backgroundButton">
+                <img class="buttonImg" src="../images/pencilButton.png"/>
+            </button>
+        </div>
         <div v-if="showEdit" class="editContainer">
-            <input type="text" v-model="currentTitle"/>
-            <textarea rows="10" cols="50" v-model="currentDescription"/>
-            <button @click="edited">Edited</button>
-            <button @click="cancelEdit">Cancel</button>
+            <input type="text" v-model="currentTitle" />
+            <textarea rows="10" cols="50" v-model="currentDescription" />
+            <div class="buttonEditCheckDelete">
+                <button @click="edited" class="backgroundButton">
+                    <img class="buttonImgSaveAndCancel" src="../images/saveButton.png" />
+                </button>
+                <button @click="cancelEdit" class="backgroundButton">
+                    <img class="buttonImgSaveAndCancel" src="../images/cancelButton.png" />
+                </button>
+            </div>
         </div>
-            <div v-if="modal" class="modal">
-                <h3> Are you sure? </h3>
-                <p> If you delete this task, you can't get it back</p>
-                <button @click="deleteTask"> Yes </button>
-                <button @click="modal = false"> No </button>
-        </div>
+    </div>
+    <div v-if="modal" class="modal">
+        <h3> Are you sure? </h3>
+        <p> If you delete this task, you can't get it back</p>
+        <button @click="deleteTask"> Yes </button>
+        <button @click="modal = false"> No </button>
     </div>
 </template>
 
@@ -72,15 +91,16 @@ const editTask = () => {
 //se crea una función para actualizar el contenido de la tarea.
 const edited = () => {
     taskStore.edited(currentTitle.value, currentDescription.value, props.task.id);
+    showEdit.value = false;
 };
+
+const addImageOrColor = () => {
+    
+}
 
 </script>
 
-<style>
-.completed{
-    background-color: red;
-}
-</style>
+<style></style>
 
 // <!--
 // **Hints**

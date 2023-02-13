@@ -57,8 +57,8 @@ nav ul {
     background-color: #ffffffab;
     box-shadow: 5px 20px 80px #181616ba;
     border-radius: 20px;
-    background-image: url('../images/Captura.PNG');
-    background-size: auto;
+    background-image: url('../images/formSignIn-UpBackground.PNG');
+    background-size:  contain;
     background-repeat: no-repeat;
 }
 
@@ -98,8 +98,8 @@ nav ul {
 }
 
 .backgroundImage {
-    background-image: url('../images/5594016.jpg');
-    background-size: 100%;
+    background-image: url('../images/signIn-UpWallpaper.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
     top: 0;
@@ -150,9 +150,9 @@ nav ul {
 .sign-up-link {
     text-decoration: none;
     font-size: 1.5rem;
-    font-family: 'Chewy';
-    color: #ffbd59;
-    -webkit-text-stroke: 0.1px black;
+    color: #000;
+    text-align: center;
+    margin: 0;
 }
 
 .linkSignUp {
@@ -188,8 +188,7 @@ nav ul {
     transition: 0.2s;
     border-radius: 20px;
     border: 1px #0000001e solid;
-    padding: 2%;
-}
+} 
 
 .signUp:hover {
     color: var(--hover-text);
@@ -211,31 +210,35 @@ nav ul {
     text-align: center;
     width: 30%;
     height: 20%;
+    position: absolute;
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #00000080;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10;
+    z-index: 10; */
 }
 
 .posit {
-    background-image: url('../images/post-it.PNG');
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto; 
     background-position: center;
     width: 30%;
     height: 500px;
+    background-color: #fdfab9;
+    border-radius: 80px;
+    margin: 2em auto; 
+    box-shadow: #00000066 0px 30px 90px;
+    border: 1px #000000 solid;
 }
 
 .input-field input{
@@ -255,12 +258,13 @@ nav ul {
     height: 80%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr, 2fr;
+    grid-template-rows: 1fr, 1fr, 2fr;
     justify-content: center;
     align-items: center;
     align-content: center;
     margin: 19%;
-    font-size: 1.8em;
+    font-size: 1.4em;
+    text-align: center;
 }
 
 .buttonAdd {
@@ -282,4 +286,95 @@ nav ul {
     /* top: 28%;  */
     text-align: center;
     transform: translate(0%, 0%);
+    color: rgb(255, 8, 8); 
+}
+
+.addTaskSticker h1 {
+    font-family: 'Chewy';
+    color: #ffbd59;
+    -webkit-text-stroke: 0.1px black;
+    font-size: 4em;
+    background-image: url('../images/arrowPostIt.png');
+    background-size: 18%;
+    background-position: 0;
+    background-repeat: no-repeat;
+    /* margin: 2%; */
+    padding: 1.3rem;
+}
+
+.containerTask {
+    width: 12%;
+    margin: 4%;
+    /* padding: 0 5em; */
+    box-shadow: #00000066 0px 30px 90px;
+    border: 1px black solid;
+    border-radius: 16px;
+    background-color: #fcd3d5;
+}
+
+.containerTask h3 {
+    font-size: 2.4em;
+    text-align: center;
+}
+
+.containerTask p {
+    font-size: 1.6em; 
+    text-align: center;
+}
+
+.completed {
+    background-color: #ff000011;
+}
+
+.buttonImg {
+    width: 120%;
+    border-radius: 0;
+}
+
+.buttonEditCheckDelete {
+    display: flex;
+    margin: 2%;
+}
+
+.backgroundButton {
+    background-color: #fcd3d5;
+    border: none;
+    margin: 3%;
+}
+
+.addImageOrColor {
+    background: none;
+    border: none; 
+    margin: 0;
+    display: flex;
+}
+
+.addImageOrColor img {
+    width: 26%;
+}
+
+.editContainer {
+    margin: 12%;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 2fr, 1fr;
+    display: grid; 
+    grid-row-gap: 12px;
+}
+
+.editContainer input, textarea {
+    background-color: #fcd3d5;
+    border: 1px  #b27e80 solid;
+}
+
+.buttonImgSaveAndCancel {
+    width: 80%;
+    border-radius: 0;
+}
+
+.iconPushpin {
+    width: 20%;
+    border-radius: 0;
+    display: grid;
+    justify-content: flex-end;
 }
