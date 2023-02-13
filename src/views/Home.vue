@@ -1,5 +1,5 @@
 <template>
-    <div class="cork">
+    <!-- <div class="cork"> -->
       <div class="wrapper">
         <Nav />
 
@@ -11,9 +11,11 @@
           <div class="addTaskSticker">
             <h1>To do tasks:</h1>
           </div>
-        <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
+          <div class="divCard">
+            <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
+          </div>
       </div>
-    </div>
+    <!-- </div> -->
 </template>
 
 <script setup>
