@@ -1,15 +1,23 @@
 <template>
-<div class="container">
-    <h3>{{ task.title }}</h3>
-    <p>{{ task.description }}</p>
-    <button @click="deleteTask">Delete {{task.title}}</button>
-    <button @click="completeTask">Completed</button>
-    <button @click ="editTask">Edit</button>
-    <div v-if="showEdit" class="editContainer">
-        <input type="text" v-model="currentTitle"/>
-        <textarea rows="10" cols="50" v-model="currentDescription"/>
+    <div class="container" :class="{overlay: modal}">
+        <h3 :class="{completed: isComplete}">{{ task.title }}</h3>
+        <p :class="{completed: isComplete}">{{ task.description }}</p>
+        <button @click="modal = true">Delete</button>
+        <button @click="completeTask">Completed</button>
+        <button @click ="editTask">Edit</button>
+        <div v-if="showEdit" class="editContainer">
+            <input type="text" v-model="currentTitle"/>
+            <textarea rows="10" cols="50" v-model="currentDescription"/>
+            <button @click="edited">Edited</button>
+            <button @click="cancelEdit">Cancel</button>
+        </div>
+            <div v-if="modal" class="modal">
+                <h3> Are you sure? </h3>
+                <p> If you delete this task, you can't get it back</p>
+                <button @click="deleteTask"> Yes </button>
+                <button @click="modal = false"> No </button>
+        </div>
     </div>
-</div>
 </template>
 
 <script setup>
@@ -17,7 +25,20 @@ import { reactive, ref } from 'vue';
 import { useTaskStore } from '../stores/task';
 import { supabase } from '../supabase';
 
+
+//variable para llamar a la store de task.js
 const taskStore = useTaskStore();
+//variable para llamar al props.
+const isComplete = ref(props.task.is_complete);
+
+//creamos una variable para darle un valor booleano, que en este caso lo definiremos falso para que no muestre el contenido de los input.
+let showEdit = ref(false);
+
+const modal = ref(false);
+
+//definimos las variables para recuperar el título y la descripción de la tarea
+const currentTitle = ref("");
+const currentDescription = ref("");
 
 const props = defineProps({
     task: Object,
@@ -28,23 +49,37 @@ const deleteTask = async() => {
     await taskStore.deleteTask(props.task.id);
 };
 
-//creamos una variable para darle un valor booleano, que en este caso lo definiremos falso para que no muestre el contenido de los input.
-let showEdit = ref(false);
+//Función para completar las tareas
+const completeTask = () => {
+    //1º Al ser llamada, modifica el style del h3 y del p. 
+    isComplete.value = !isComplete.value;
+    //2º Se comunica con la base de datos, para marcar el estado de la tarea como realizado / no realizado.
+    taskStore.toggleTask(isComplete.value, props.task.id);
+}
+
+//Hacemos una función para cambiar el valor booleano y así que no muestre el contenido de showEdit.
+const cancelEdit = () => {
+    showEdit.value = false;
+};
 
 //se crea una función de flecha para que cambie el valor de la variable creada a true.
 const editTask = () => {
     showEdit.value = true;
+    currentTitle.value = props.task.title;
+    currentDescription.value = props.task.description;
 };
 
-const currentTitle = ref(props.task.title.value);
-const currentDescription = ref(props.task.description.value);
+//se crea una función para actualizar el contenido de la tarea.
+const edited = () => {
+    taskStore.edited(currentTitle.value, currentDescription.value, props.task.id);
+};
 
 </script>
 
 <style>
-
-@import "../assets/style.css";
-
+.completed{
+    background-color: red;
+}
 </style>
 
 // <!--

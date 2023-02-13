@@ -1,17 +1,22 @@
 <template>
-    <h1>Add a new Task</h1>
-    <div v-if="showErrorMessage">
-        <p class="error-text">{{ errorMessage }}</p>
-    </div>
-    <div>
-        <div class="input-field">
-            <input type="text" placeholder="Add a Task Title - Listen to Kendrick Lamar" v-model="name">
-        </div>
-        <div class="input-field">
-            <input type="text" placeholder="Add a Task Description - Look up Kendrick Lamar's FEAR album on spotify and listen to the whole album." v-model="description">
-        </div>
-        <button @click="addTask" class="button">Add</button>
-    </div>
+  <div class="posit">
+      <div class="addTask">
+          <h1>Add a new Task
+            <div v-if="showErrorMessage" class="error-text">
+                {{ errorMessage }}
+            </div>
+          </h1>
+          <div class="adding">
+              <div class="input-field">
+                  <input type="text" placeholder="Add a Task Title - Listen to Kendrick Lamar" v-model="name">
+              </div>
+              <div class="input-field">
+                  <input type="text" placeholder="Add a Task Description - Look up Kendrick Lamar's FEAR album on spotify and listen to the whole album." v-model="description">
+              </div>
+              <button @click="addTask" class="buttonAdd">Add</button>
+          </div>
+      </div>
+  </div>
 </template>
 
 <script setup>
@@ -33,24 +38,23 @@ const errorMessage = ref(null);
 // Arrow function para crear tareas.
 const addTask = () => {
 if(name.value.length === 0 || description.value.length === 0){
-    // Primero comprobamos que ningún campo del input esté vacío y lanzamos el error con un timeout para informar al user.
+  // Primero comprobamos que ningún campo del input esté vacío y lanzamos el error con un timeout para informar al user.
 
-    showErrorMessage.value = true;
-    errorMessage.value = 'The task title or description is empty';
-    setTimeout(() => {
-    showErrorMessage.value = false;
-    }, 5000);
+  showErrorMessage.value = true;
+  errorMessage.value = 'The task title or description is empty';
+  setTimeout(() => {
+  showErrorMessage.value = false;
+  }, 5000);
 
 } else {
-    // Aquí mandamos los valores a la store para crear la nueva Task. Esta parte de la función tenéis que refactorizarla para que funcione con emit y el addTask del store se llame desde Home.vue.
+  // Aquí mandamos los valores a la store para crear la nueva Task. Esta parte de la función tenéis que refactorizarla para que funcione con emit y el addTask del store se llame desde Home.vue.
 
-    taskStore.addTask(name.value, description.value);
-    name.value = '';
-    description.value = '';
+  taskStore.addTask(name.value, description.value);
+  name.value = '';
+  description.value = '';
 }
 };
 
 </script>
 
 <style></style>
-  
