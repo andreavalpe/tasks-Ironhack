@@ -1,9 +1,13 @@
 <template>
+    <div class="wallpaperWeb">
     <Nav />
-    <div class="addTaskSticker">
-        <h1>Completed Tasks:</h1>
+        <div class="completedTasks">
+            <h1>Completed Tasks:</h1>
+        </div>
+        <div class="divCard">
+            <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
+        </div>
     </div>
-    <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
 </template>
 
 <script setup>

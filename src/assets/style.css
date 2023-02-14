@@ -31,26 +31,46 @@ body {
     margin: 0;
     padding: 0;
 }
+
 nav {
-    background-color: rgb(160, 205, 238);
+    background-color: #a0cdee;
     display: flex;
     width: 100%;
     justify-content: space-around;
     align-items: center;
     background-repeat: no-repeat;
     border: #719bf0 1px solid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
 }
 
 nav ul {
     list-style: none;
     padding-inline-start: 0;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr;
+    grid-template-areas:
+            "position1 position2";
 }
 
-nav li {
+.position1 {
+    grid-area: position1; 
+}
+
+.position2 {
+    grid-area: position2;
+}
+
+.linkNav {
     text-decoration: none;
+    color: #1b83cd;
+    font-size: 1.2em;
+    margin: 0 20%; 
 }
 
 .signIn {
@@ -215,9 +235,14 @@ nav li {
     border-radius: 10px;
     padding: 20px;
     text-align: center;
+    align-items: center;
     width: 30%;
-    height: 20%;
+    height: 48%;
     position: absolute;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: center;
 }
 
 .overlay {
@@ -227,11 +252,11 @@ nav li {
     bottom: 0;
     left: 0;
     right: 0;
-    /* display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10; */
-}
+    z-index: 10; 
+} 
 
 .posit {
     background-repeat: no-repeat;
@@ -240,7 +265,7 @@ nav li {
     justify-content: center;
     background-position: center;
     width: 30%;
-    height: 500px;
+    height: 520px;
     background-color: #fdfab9;
     border-radius: 80px;
     margin: 2em auto; 
@@ -275,10 +300,19 @@ nav li {
 }
 
 .buttonAdd {
-    background-color: #719bf0;
-    border-radius: 12px;
-    padding: 1em 2em;
+    padding: 0 2em;
     cursor: pointer;
+    border: none; 
+    background-color: #fdfab9;
+    font-family: 'Chewy';
+    color: #719bf0;
+    -webkit-text-stroke: 0.1px #000000;
+    font-size: 1.6em;
+}
+
+.buttonAdd img {
+    width: 50%;
+    border-radius: 0;
 }
 
 .adding {
@@ -304,10 +338,10 @@ nav li {
 .addTaskSticker h1 {
     font-family: 'Chewy';
     color: #ffbd59;
-    -webkit-text-stroke: 0.1px black;
+    -webkit-text-stroke: 0.1px #000000;
     font-size: 4em;
     background-image: url('../images/arrowPostIt.png');
-    background-size: 18%;
+    background-size: 22%;
     background-position: 0;
     background-repeat: no-repeat;
     /* margin: 2%; */
@@ -399,4 +433,73 @@ nav li {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     place-items: center;
+}
+
+.wallpaperWeb {
+    background-image: url('../images/wallpaperHome.png');
+    background-size: 40%;
+}
+
+.buttonSignOut {
+    border-radius: 0;
+    border: none;
+    background-color: #a0cdee;
+    cursor: pointer;
+}
+
+.buttonSignOut img {
+    width: 10%;
+    border-radius: 0;
+}
+
+.modalButton {
+    border-radius: 0;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.modalButton img { 
+    border-radius: 0;
+    width: 60%;
+}
+
+.modal h3 {
+    font-size: 2em;
+    font-family: 'Chewy';
+    color: #d375d6;
+    -webkit-text-stroke: 0.1px #000000;
+}
+
+.modal p {
+    font-size: 1.6em;
+    font-family: 'Chewy';
+    color: #7b237e;
+    -webkit-text-stroke: 0.1px #000000;
+}
+
+.catImg {
+    width: 20%;
+    border: none;
+    border-radius: 0;
+    align-items: center;
+}
+
+.centerImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.completedTasks h1 {
+    font-family: 'Chewy';
+    color: #ffbd59;
+    -webkit-text-stroke: 0.1px #000000;
+    font-size: 2em;
+    background-image: url('../images/arrowPostIt.png');
+    background-size: 17%;
+    background-position: 0;
+    background-repeat: no-repeat;
+    /* margin: 2%; */
+    padding: 1.3rem;
 }

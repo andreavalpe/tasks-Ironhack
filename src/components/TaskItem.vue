@@ -1,14 +1,14 @@
 <template>
-    <div class="containerTask" :class="{overlay: modal}">
+    <div class="containerTask">
         <div>
            <button class="addImageOrColor" @click="addImageOrColor">
-            <img src="../images/plusSymbol.png"/>
+            <!-- <img src="../images/plusSymbol.png"/> -->
            </button> 
         </div>
         <h3 :class="{completed: isComplete}">{{ task.title }}</h3>
         <p :class="{completed: isComplete}">{{ task.description }}</p>
         <div v-if="!showEdit" class="buttonEditCheckDelete">
-            <button @click="modal = true" class="delete backgroundButton">
+            <button @click="showModal" class="delete backgroundButton">
                 <img class="buttonImg" src="../images/trashButton.png"/>
             </button>
             <button @click="completeTask" class="completedButton backgroundButton">
@@ -31,12 +31,25 @@
             </div>
         </div>
     </div>
-    <div v-if="modal" class="modal">
-        <h3> Are you sure? </h3>
-        <p> If you delete this task, you can't get it back</p>
-        <button @click="deleteTask"> Yes </button>
-        <button @click="modal = false"> No </button>
+    <div v-if="modal" class="overlay">
+        <div class="modal">
+            <h3> Are you sure? </h3>
+            <div class="centerImg">
+                <img class="catImg" src="../images/modalImg.png"/>
+            </div>
+            <p> If you delete this task, you can't get it back</p>
+            <div class="buttonEditCheckDelete">
+                <button @click="deleteTask" class="modalButton"> 
+                    <img src="../images/yesButton.png"/>
+                </button>
+                <button @click="closeModal" class="modalButton">  
+                    <img src="../images/noButton.png"/>
+                </button>
+            </div>
+        </div>
     </div>
+    
+
 </template>
 
 <script setup>
@@ -62,6 +75,18 @@ const currentDescription = ref("");
 const props = defineProps({
     task: Object,
 });
+
+//función para enseñar el modal al hacer click en delete
+const showModal = () => {
+    modal.value = true;
+    document.body.style.overflow = 'hidden'
+}
+
+//función para cerrar el modal al hacer click en delete
+const closeModal = () => {
+    modal.value = false;
+    document.body.style.overflow = 'auto'
+}
 
 // Función para borrar la tarea a través de la store. El problema que tendremos aquí (y en NewTask.vue) es que cuando modifiquemos la base de datos los cambios no se verán reflejados en el v-for de Home.vue porque no estamos modificando la variable tasks guardada en Home. Usad el emit para cambiar esto y evitar ningún page refresh.
 const deleteTask = async() => {
@@ -93,10 +118,6 @@ const edited = () => {
     taskStore.edited(currentTitle.value, currentDescription.value, props.task.id);
     showEdit.value = false;
 };
-
-const addImageOrColor = () => {
-    
-}
 
 </script>
 

@@ -1,18 +1,17 @@
 <template>
     <!-- <div class="cork"> -->
-      <div class="wrapper">
+      <div class="wrapper wallpaperWeb">
         <Nav />
-
-        <div class="content"> 
-          <!-- <h3>Your account:</h3>
-          <router-link to="/account">Account</router-link> -->
-        </div>
-        <NewTask />
-          <div class="addTaskSticker">
-            <h1>To do tasks:</h1>
+          <div class="content"> 
+            <!-- <h3>Your account:</h3>
+            <router-link to="/account">Account</router-link> -->
           </div>
-          <div class="divCard">
-            <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
+          <NewTask />
+            <div class="addTaskSticker">
+              <h1>To do tasks:</h1>
+            </div>
+            <div class="divCard">
+              <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
           </div>
       </div>
     <!-- </div> -->

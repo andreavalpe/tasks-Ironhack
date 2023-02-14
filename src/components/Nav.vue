@@ -1,27 +1,29 @@
 <template>
   <nav>
     <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
-    <router-link to="/">
+    <router-link to="/" class="linkNav">
       Home
     </router-link>
 
-    <ul>
+    <ul class="positionNav">
         <li>
-          <router-link to="/completedTask">Completed Task</router-link>
+          <router-link to="/completedTask" class="linkNav">Completed Task</router-link>
         </li>
 
         <li>
-          <router-link to="/account">Your Account</router-link>
+          <router-link to="/account" class="linkNav">Your Account</router-link>
         </li>
     </ul>
 
     <div>
-      <ul>
-        <li class="log-out-welcome">
+      <ul class="positionNav">
+        <li class="log-out-welcome linkNav">
           <p>Welcome, user</p>
         </li>
         <li>
-          <button @click="signOut" class="button">Log out</button>
+          <button @click="signOut" class="buttonSignOut">
+            <img src="../images/logOut.png"/>
+          </button>
         </li>
       </ul>
     </div>
