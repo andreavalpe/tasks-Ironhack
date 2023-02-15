@@ -25,10 +25,10 @@
             <button id="signIn" class="signInButton" type="submit">
             Sign In
             </button>
-          </div>
-          <p class="linkSignUp">
+            <p class="linkSignUp">
             Have an account? </p>
-          <span class="signUp"> <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link" /></span>
+            <span class="signUp"> <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link" /></span>
+          </div>
         </div>
         </form>
     </div>

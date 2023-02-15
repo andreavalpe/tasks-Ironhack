@@ -78,12 +78,12 @@ nav ul {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
     align-items: center;
-    margin: 10% 40%;
+    margin: 2% 40%;
     background-color: #ffffffab;
     box-shadow: 5px 20px 80px #181616ba;
     border-radius: 20px;
     background-image: url('../images/formSignIn-UpBackground.PNG');
-    background-size:  contain;
+    background-size:  102%;
     background-repeat: no-repeat;
 }
 
@@ -100,20 +100,20 @@ nav ul {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    grid-row-gap: 20px;
 }
 
 .form-input {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
+    padding: 2%;
 }
 
 .form-input input {
     border-radius: 13px;
     border: 2px solid #dfb44e;
     margin: 2% 8%;
-    height: 80%;
+    padding: 2%;
 }
 
 .containerButton {
@@ -502,4 +502,51 @@ nav ul {
     background-repeat: no-repeat;
     /* margin: 2%; */
     padding: 1.3rem;
+}
+
+
+@media (max-width: 766px) {
+
+.signIn {
+    margin: 10% 20%;
+    background-size: 100%;
+}
+
+.logo {
+    width: 18%;
+    margin-top: 11%;
+}
+
+.form {
+    grid-row-gap: 14px;
+}
+
+.containerButton {
+    margin-top: 2%;
+    height: 40%;
+}
+
+.signInButton {
+    padding: 0 20%; 
+}
+
+.form-input input {
+    height: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
