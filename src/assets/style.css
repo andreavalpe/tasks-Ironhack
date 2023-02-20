@@ -151,9 +151,9 @@ nav ul {
 }
 
 .signInButton {
-    --bg: #d9b768;
-    --hover-bg: #ffbd59;
-    --hover-text: #000;
+    --bg: #f5bdb9;
+    --hover-bg: #f5bdb9;
+    --hover-text: #f5bdb9;
     background: var(--bg);
     transition: 0.2s;
     border-radius: 20px;
@@ -165,7 +165,7 @@ nav ul {
     margin-left: 16%;
     text-align: center;
     font-family: 'Chewy';
-    color: #ffbd59;
+    color: #f5bdb9;
     font-weight: bold;
     -webkit-text-stroke: 0.1px #000000;
     font-size: 1.2em;
@@ -193,7 +193,7 @@ nav ul {
     text-align: center;
     margin: 0;
     font-family: 'Chewy';
-    color: #ffbd59;
+    color: #f5bdb9;
     -webkit-text-stroke: 0.1px #000000;
     font-weight: 700;
 }
@@ -225,10 +225,10 @@ nav ul {
 }
 
 .signUp {
-    --bg: #d9b768;
-    --hover-bg: #ffbd59;
-    --hover-text: #000;
-    color: #000;
+    --bg: #f5bdb9;
+    --hover-bg: #f5bdb9;
+    --hover-text: #f5bdb9;
+    color: #f5bdb9;
     background: var(--bg);
     transition: 0.2s;
     border-radius: 20px;
@@ -329,6 +329,7 @@ nav ul {
     color: #719bf0;
     -webkit-text-stroke: 0.1px #000000;
     font-size: 1.6em;
+    font-weight: bold;
 }
 
 .buttonAdd img {
@@ -524,6 +525,12 @@ nav ul {
     padding: 1.3rem;
 }
 
+.formSignUp {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+
+}
 
 @media (max-width: 766px) {
 

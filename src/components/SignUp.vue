@@ -1,15 +1,21 @@
 <template>
-  <div class="container">
+  <div class="backgroundImage">
+      <div class="signIn">
+        <div class="container">
+          <!-- <h3 class="header-title">Log In to ToDo App</h3> -->
+          <div class="imgDiv">
+            <img class="logo" src="../images/logo.png"/>
+          </div>
 
-    <div class="header">
+    <!-- <div class="header">
       <div class="header-description">
         <h3 class="header-title">Register to ToDo App</h3>
         <p class="header-subtitle">Start organizing your tasks!</p>
       </div>
-    </div>
+    </div> -->
 
     <form @submit.prevent="signUp" class="form-sign-in">
-      <div class="form">
+      <div class="formSignUp">
         <div class="form-input">
           <label class="input-field-label">E-mail</label>
           <input
@@ -54,6 +60,8 @@
         </p>
       </div>
     </form>
+    </div>
+  </div>
 
     <div v-show="errorMsg">{{errorMsg}}</div>
   </div>
