@@ -52,6 +52,8 @@ Tener un archivo README.md bien estructurado y bien documentado también puede s
 
 <!-- ABOUT THE PROJECT -->
 
+(Proyecto y readme en construcción)
+
 ## Acerca del Proyecto
 
 La sección "sobre el proyecto" en un archivo README es una sección importante que proporciona información general sobre el objetivo y la funcionalidad del proyecto.
@@ -67,7 +69,6 @@ En esta sección se puede incluir información como:
 - Contribuciones de las personas en el proyecto.
 
 En resumen, la sección "sobre el proyecto" es una excelente manera de brindar a los usuarios y contribuidores una visión general del proyecto y proporcionarles toda la información necesaria para comenzar a trabajar con él. -->
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,7 +104,6 @@ En este punto accedemos a mi planteamiento diario para realizar cada punto del p
 
 - [x] Hacer clases repasando términos de vue.
 
-
 ###### Martes 07, Febrero 2023
 
 - [x] Creación de una cuenta para que los usuarios se puedan registrar mediante un Sign Up, para iniciar sesión y cerrar sesión a través del Log In y Log Out.
@@ -123,6 +123,11 @@ En este punto accedemos a mi planteamiento diario para realizar cada punto del p
 ###### Viernes 10, Febrero 2023
 
 - [ ] Seguir con el css.
+
+###### Lunes 20, Febrero 2023
+
+- [x] Acabar toda la lógica.
+- [x] Acabar de estilar en css.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -192,4 +197,3 @@ En esta sección se puede incluir información como:
 - Lecciones aprendidas y recomendaciones para evitar errores similares en el futuro.
 
 En resumen, la sección "grande error" es una forma de ser transparente sobre los errores cometidos durante el desarrollo del proyecto. También puede ser útil para otros desarrolladores que trabajen en el proyecto, ya que les brinda información valiosa sobre problemas potenciales y cómo se abordaron. -->
-

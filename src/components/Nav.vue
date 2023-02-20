@@ -10,9 +10,9 @@
           <router-link to="/completedTask" class="linkNav">Completed Task</router-link>
         </li> -->
 
-        <li>
+        <!-- <li>
           <router-link to="/account" class="linkNav">Your Account</router-link>
-        </li>
+        </li> -->
     </ul>
 
     <div>

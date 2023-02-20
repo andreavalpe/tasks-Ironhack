@@ -528,14 +528,40 @@ nav ul {
 .formSignUp {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
 
+.signUpForm {
+    align-items: center;
+    margin: 4% 35%;
+    background-color: #ffffffab;
+    box-shadow: 5px 20px 80px #181616ba;
+    border-radius: 20px;
+    background-image: url('../images/formSignIn-UpBackground.PNG');
+    background-size: 102%;
+    background-repeat: no-repeat;
+}
+
+.signUpFormRegister {
+    align-items: center;
+    margin: 4% 35%;
+    background-color: #ffffffab;
+    box-shadow: 5px 20px 80px #181616ba;
+    border-radius: 20px;
+    background-image: url('../images/registerwallpaper.png');
+    background-size: 102%;
+    background-repeat: no-repeat;
 }
 
 @media (max-width: 766px) {
 
 .signIn {
-    margin: 12% 20%;
+    margin: 7% 20%;
+    background-size: 100%;
+}
+
+.signUpFormRegister {
+    margin: 2% 20%;
     background-size: 100%;
 }
 
@@ -582,7 +608,11 @@ nav ul {
 
 }
 
-
+.logoSignUp {
+    width: 10%;
+    margin-top: 11%;
+    transform: translate(30%, -90%);
+}
 
 
 

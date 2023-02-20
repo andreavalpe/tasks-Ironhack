@@ -1,11 +1,11 @@
 <template>
   <div class="backgroundImage">
-      <div class="signIn">
+      <div class="signUpFormRegister">
         <div class="container">
           <!-- <h3 class="header-title">Log In to ToDo App</h3> -->
-          <div class="imgDiv">
+          <!-- <div class="imgDiv">
             <img class="logo" src="../images/logo.png"/>
-          </div>
+          </div> -->
 
     <!-- <div class="header">
       <div class="header-description">
@@ -16,6 +16,9 @@
 
     <form @submit.prevent="signUp" class="form-sign-in">
       <div class="formSignUp">
+        <div class="imgDiv">
+              <!-- <img class="logoSignUp" src="../images/logo.png"/> -->
+        </div>
         <div class="form-input">
           <label class="input-field-label">E-mail</label>
           <input
@@ -49,16 +52,21 @@
             required
           />
         </div>
-        <button class="button" type="submit">Sign Up</button>
-        <p>
+      <div class="containerButton">
+        <button class="signInButton" type="submit">
+          Sign Up
+        </button>
+        <div class="accountSignUp"> 
+          <p class="linkSignUp">
           Have an account?
-          <PersonalRouter
+          </p>
+          <span class="signUp"><PersonalRouter
             :route="route"
             :buttonText="buttonText"
-            class="sign-up-link"
-          />
-        </p>
+            class="sign-up-link"/> </span>
+        </div>
       </div>
+    </div>
     </form>
     </div>
   </div>
