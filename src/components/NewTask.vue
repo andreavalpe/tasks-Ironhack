@@ -1,7 +1,9 @@
 <template>
   <div class="posit">
       <div class="addTask">
-        <img class="iconPushpin" src="../images/pushpin.png"/>
+        <div>
+          <img class="iconPushpin" src="../images/pushpin.png"/>
+        </div>
           <h1>Add a new Task
             <div v-if="showErrorMessage" class="error-text">
                 {{ errorMessage }}

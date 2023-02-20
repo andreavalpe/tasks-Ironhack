@@ -1,11 +1,13 @@
 <template>
   <nav>
     <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
-    <router-link to="/" class="linkNav">
+    <!-- <router-link to="/" class="linkNav">
       Home
-    </router-link>
+    </router-link> -->
 
-    <ul class="positionNav">
+    <!-- <ul class="positionNav"> -->
+      <img class="logoNav" src="../images/logo.png"/>
+      <h2 class="title"> To do List </h2>
         <!-- <li>
           <router-link to="/completedTask" class="linkNav">Completed Task</router-link>
         </li> -->
@@ -13,19 +15,19 @@
         <!-- <li>
           <router-link to="/account" class="linkNav">Your Account</router-link>
         </li> -->
-    </ul>
+    <!-- </ul> -->
 
     <div>
-      <ul class="positionNav">
+      <!-- <ul class="positionNav">
         <li class="log-out-welcome linkNav">
-          <p>Welcome, user</p>
+           <p>Welcome, user</p> 
         </li>
-        <li>
+        <li> -->
           <button @click="signOut" class="buttonSignOut">
             <img src="../images/logOut.png"/>
           </button>
-        </li>
-      </ul>
+        <!-- </li>
+      </ul> -->
     </div>
   </nav>
 </template>
