@@ -129,6 +129,10 @@ En este punto accedemos a mi planteamiento diario para realizar cada punto del p
 - [x] Acabar toda la lógica.
 - [x] Acabar de estilar en css.
 
+###### Martes 21, Febrero 2023
+
+- [x] Hacer responsive la web.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Acerca de mi -->
