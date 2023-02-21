@@ -569,6 +569,21 @@ nav ul {
     text-align: center;
 }
 
+.footer {
+    background-color: #a0cdee;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer h3 {
+    font-family: 'Chewy';
+    color: #ffbd59;
+    -webkit-text-stroke: 0.1px #000000;
+    font-size: 1.4em;
+}
+
 @media (max-width: 766px) {
 
 .signIn {
@@ -634,6 +649,16 @@ nav ul {
     width: 36%;
 }
 
+.footer h3 {
+    font-family: 'Chewy';
+    color: #ffbd59;
+    -webkit-text-stroke: 0.1px #000000;
+    font-size: 1.8em;
+}
+
+.catImg {
+    width: 40%;
+}
 
 
 
