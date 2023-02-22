@@ -264,7 +264,69 @@ nav ul {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
     justify-content: center;
-    animation: modal 0.8s linear both
+    animation: modal 0.8s linear both;
+}
+
+.modalWelcome { 
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    width: 30%;
+    height: 48%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: center;
+    animation: modalWelcome 0.4s linear both
+}
+
+@keyframes modalWelcome {
+    0% {
+        transform: scale(0);
+        filter: blur(12px);
+        opacity: 0
+    }
+
+    100% {
+        transform: scale(1);
+        filter: blur(0);
+        opacity: 1
+    }
+}
+
+.modalWelcome h3 {
+    font-size: 2em;
+    font-family: 'Chewy';
+    color: #d375d6;
+    -webkit-text-stroke: 0.1px #000000;
+}
+
+.modalWelcome p {
+    font-size: 1.6em;
+    font-family: 'Chewy';
+    color: #7b237e;
+    -webkit-text-stroke: 0.1px #000000;
+}
+
+.catImgTwo {
+    width: 20%;
+    border-radius: 0;
+}
+
+.modalButtonTwo {
+    border-radius: 0;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.modalButtonTwo img {
+    border-radius: 0;
+    width: 10%;
 }
 
 
@@ -719,7 +781,13 @@ nav ul {
     font-size: 1.8em;
 }
 
+.catImgTwo {
+    width: 30%;
+}
 
+.modalWelcome p {
+    font-size: 1em;
+}
 
 
 
