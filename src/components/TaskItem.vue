@@ -110,9 +110,12 @@ const cancelEdit = () => {
 
 //se crea una función de flecha para que cambie el valor de la variable creada a true.
 const editTask = () => {
+   if (isComplete.value === false ) {
     showEdit.value = true;
     currentTitle.value = props.task.title;
     currentDescription.value = props.task.description;
+}
+    
 };
 
 //se crea una función para actualizar el contenido de la tarea.
