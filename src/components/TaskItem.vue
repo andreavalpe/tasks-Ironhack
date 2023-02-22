@@ -15,7 +15,7 @@
             <button @click="completeTask" class="completedButton backgroundButton">
                 <img class="buttonImg" src="../images/checkButton.png"/>
             </button>
-            <button @click ="editTask" class="edit backgroundButton">
+            <button @click ="editTask" :class="{buttonPencil: run, shake: doIt, edit:true, backgroundButton: true}">
                 <img class="buttonImg" src="../images/pencilButton.png"/>
             </button>
         </div>
@@ -67,7 +67,12 @@ const isComplete = ref(props.task.is_complete);
 //creamos una variable para darle un valor booleano, que en este caso lo definiremos falso para que no muestre el contenido de los input.
 let showEdit = ref(false);
 
+//se crean dos variables para 
 const modal = ref(false);
+
+const run = ref (false);
+
+const doIt = ref (false);
 
 //definimos las variables para recuperar el título y la descripción de la tarea
 const currentTitle = ref("");
@@ -80,19 +85,19 @@ const props = defineProps({
 //función para enseñar el modal al hacer click en delete
 const showModal = () => {
     modal.value = true;
-    document.body.style.overflow = 'hidden'
+    document.body.style.overflow = 'hidden';
 }
 
 //función para cerrar el modal al hacer click en delete
 const closeModal = () => {
     modal.value = false;
-    document.body.style.overflow = 'auto'
+    document.body.style.overflow = 'auto';
 }
 
 // Función para borrar la tarea a través de la store. El problema que tendremos aquí (y en NewTask.vue) es que cuando modifiquemos la base de datos los cambios no se verán reflejados en el v-for de Home.vue porque no estamos modificando la variable tasks guardada en Home. Usad el emit para cambiar esto y evitar ningún page refresh.
 const deleteTask = async() => {
     await taskStore.deleteTask(props.task.id);
-    document.body.style.overflow = 'auto'
+    document.body.style.overflow = 'auto';
 };
 
 //Función para completar las tareas
@@ -101,6 +106,8 @@ const completeTask = () => {
     isComplete.value = !isComplete.value;
     //2º Se comunica con la base de datos, para marcar el estado de la tarea como realizado / no realizado.
     taskStore.toggleTask(isComplete.value, props.task.id);
+
+    run.value = !run.value;
 }
 
 //Hacemos una función para cambiar el valor booleano y así que no muestre el contenido de showEdit.
@@ -108,14 +115,16 @@ const cancelEdit = () => {
     showEdit.value = false;
 };
 
+
 //se crea una función de flecha para que cambie el valor de la variable creada a true.
 const editTask = () => {
    if (isComplete.value === false ) {
     showEdit.value = true;
     currentTitle.value = props.task.title;
     currentDescription.value = props.task.description;
-}
-    
+}   else {
+    doIt.value = !doIt.value;
+}  
 };
 
 //se crea una función para actualizar el contenido de la tarea.
