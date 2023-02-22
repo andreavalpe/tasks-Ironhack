@@ -264,6 +264,37 @@ nav ul {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
     justify-content: center;
+    animation: modal 0.8s linear both
+}
+
+
+@keyframes modal {
+
+    0%,
+    100% {
+        transform: translateX(0)
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        transform: translateX(-10px)
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: translateX(10px)
+    }
+
+    80% {
+        transform: translateX(8px)
+    }
+
+    90% {
+        transform: translateX(-8px)
+    }
 }
 
 .overlay {
@@ -293,13 +324,24 @@ nav ul {
     margin: 2% 36%; 
 }
 
-.input-field input{
+.input-field input {
     background-color: #ffe16b;
     border: 1px #6d4a16 solid;
     border-radius: 12px;
     padding: 1em;
     width: 80%;
     margin: 2%;
+}
+
+.taskDescription {
+    background-color: #ffe16b;
+    border: 1px #6d4a16 solid;
+    border-radius: 12px;
+    padding: 1em;
+    width: 80%;
+    margin: 2%;
+    width: 209px;
+    height: 18px;
 }
 
 .addTask {
@@ -393,7 +435,21 @@ nav ul {
 }
 
 .completed {
-    background-color: #ff000011;
+    background-color: #5a5454d3;
+    /* animation: completed 1.2s linear both */
+}
+
+@keyframes completed {
+    0% {
+        transform: scale(1);
+        filter: blur(.01px);
+    }
+
+    100% {
+        transform: scale(0);
+        filter: blur(12px);
+        opacity: 0
+    }
 }
 
 .buttonImg {
@@ -408,7 +464,7 @@ nav ul {
 }
 
 .backgroundButton {
-    background-color: #fcd3d5;
+    background-color: inherit;
     border: none;
     margin: 3%;
 }
@@ -570,6 +626,7 @@ nav ul {
 }
 
 .footer {
+    margin-top: 4%;
     background-color: #a0cdee;
     display: flex;
     width: 100%;
@@ -582,6 +639,11 @@ nav ul {
     color: #ffbd59;
     -webkit-text-stroke: 0.1px #000000;
     font-size: 1.4em;
+}
+
+.addColor img {
+    border-radius: 0;
+    width: 10%;
 }
 
 @media (max-width: 766px) {
@@ -628,6 +690,7 @@ nav ul {
 
 .modal {
     width: 60%;
+    height: 54%;
 }
 
 .completedTasks h1{
@@ -654,10 +717,6 @@ nav ul {
     color: #ffbd59;
     -webkit-text-stroke: 0.1px #000000;
     font-size: 1.8em;
-}
-
-.catImg {
-    width: 40%;
 }
 
 

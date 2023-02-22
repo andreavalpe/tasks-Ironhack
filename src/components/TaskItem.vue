@@ -1,12 +1,13 @@
 <template>
-    <div class="containerTask">
+    <div :class="{ completed: isComplete, containerTask: true}">
         <div>
-           <button class="addImageOrColor" @click="addImageOrColor">
-            <!-- <img src="../images/plusSymbol.png"/> -->
-           </button> 
+           <!-- <button class="addColor" @click="addColor">
+                  <img src="../images/ajustes.png">  
+                  <img src="../images/favouriteTask.PNG"/> 
+           </button>  -->
         </div>
-        <h3 :class="{completed: isComplete}">{{ task.title }}</h3>
-        <p :class="{completed: isComplete}">{{ task.description }}</p>
+        <h3>{{ task.title }}</h3>
+        <p>{{ task.description }}</p>
         <div v-if="!showEdit" class="buttonEditCheckDelete">
             <button @click="showModal" class="delete backgroundButton">
                 <img class="buttonImg" src="../images/trashButton.png"/>
@@ -119,6 +120,12 @@ const edited = () => {
     taskStore.edited(currentTitle.value, currentDescription.value, props.task.id);
     showEdit.value = false;
 };
+
+//se crea una función para que enseñe un input color 
+
+const addColor = () => {
+    addColor.value = true;
+}
 
 </script>
 

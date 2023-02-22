@@ -14,7 +14,7 @@
                   <input type="text" placeholder="Add a Task Title" v-model="name">
               </div>
               <div class="input-field">
-                  <input type="text" placeholder="Add a Task Description" v-model="description">
+                  <textarea class="taskDescription" rows="10" cols="50" placeholder="Add a Task Description" v-model="description" />
               </div>
               <button @click="addTask" class="buttonAdd"> Add <img src="../images/plusSymbol.png" />
               </button>
