@@ -1,5 +1,5 @@
 <template>
-    <div :class="{ completed: isComplete, containerTask: true}">
+    <div :id="'containerTask' + task.id" :class="{ completed: isComplete, containerTask: true}" :style="{backgroundColor: selectedColor}">
         <div>
            <!-- <button class="addColor" @click="addColor">
                   <img src="../images/ajustes.png">  
@@ -20,6 +20,8 @@
             </button>
         </div>
         <div v-if="showEdit" class="editContainer">
+            <input type="color" v-model="selectedColor" @input="changeBackground"/> 
+            <input type ="date"/>
             <input type="text" v-model="currentTitle" />
             <textarea rows="10" cols="50" v-model="currentDescription" />
             <div class="buttonEditCheckDelete">
@@ -67,20 +69,34 @@ const isComplete = ref(props.task.is_complete);
 //creamos una variable para darle un valor booleano, que en este caso lo definiremos falso para que no muestre el contenido de los input.
 let showEdit = ref(false);
 
-//se crean dos variables para 
+//se crean  variables para definir valores booleanicos para enseñar o no contenidos
 const modal = ref(false);
 
 const run = ref (false);
 
 const doIt = ref (false);
 
+//se crea una variable para recuperar el color de la base de datos y se le concatena con el +# 
+let selectedColor = ref("#" + props.task.color);
+
 //definimos las variables para recuperar el título y la descripción de la tarea
 const currentTitle = ref("");
 const currentDescription = ref("");
 
+//definir dos variables una para recuperar el color y otra para la fecha
+let date = ref("");
+let color = ref("");
+
 const props = defineProps({
     task: Object,
 });
+
+//se agrega una función para cambiar el background del div
+const changeBackground = () => {
+    const myDiv = document.getElementById('containerTask'+ props.task.id );
+    myDiv.style.backgroundColor = selectedColor.value;
+    color.value = selectedColor.value;
+}
 
 //función para enseñar el modal al hacer click en delete
 const showModal = () => {
@@ -129,7 +145,7 @@ const editTask = () => {
 
 //se crea una función para actualizar el contenido de la tarea.
 const edited = () => {
-    taskStore.edited(currentTitle.value, currentDescription.value, props.task.id);
+    taskStore.edited(currentTitle.value, currentDescription.value, color.value.slice(1), props.task.id);
     showEdit.value = false;
 };
 

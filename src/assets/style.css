@@ -503,8 +503,8 @@ nav ul {
 }
 
 .completed {
-    background-color: #5a5454d3;
-    /* animation: completed 1.2s linear both */
+    filter: grayscale(100%);
+     /* animation: completed 1.2s linear both  */
 }
 
 @keyframes completed {
@@ -558,7 +558,7 @@ nav ul {
 }
 
 .editContainer input, textarea {
-    background-color: #fcd3d5;
+    background-color: inherit;
     border: 1px  #b27e80 solid;
 }
 

@@ -30,12 +30,12 @@ export const useTaskStore = defineStore("tasks", () => {
 
   //función para completar tareas en supabase
   const toggleTask = async (isComplete, id) => {
-    const { data, error} = await supabase.from("tasks").update({ is_complete: isComplete}).match({id: id});
+    const { data, error } = await supabase.from("tasks").update({ is_complete: isComplete }).match({ id: id });
   };
 
   //función para editar tareas en supabase
-  const edited = async (title, description, id) => {
-     const { data, error} = await supabase.from("tasks").update({ title: title, description: description}).match({id: id});
+  const edited = async (title, description, color, id) => {
+    const { data, error } = await supabase.from("tasks").update({ title: title, description: description, color: color }).match({ id: id });
   };
 
   // borrar tareas de supabase
