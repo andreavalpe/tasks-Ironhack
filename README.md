@@ -133,6 +133,10 @@ En este punto accedemos a mi planteamiento diario para realizar cada punto del p
 
 - [x] Hacer responsive la web.
 
+###### Miércoles 22, Febrero 2023
+
+- [x] Ver vídeos de vue para intentar implementar cosas nuevas.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Acerca de mi -->
