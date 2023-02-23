@@ -503,7 +503,8 @@ nav ul {
 }
 
 .completed {
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
+    background-color: #4d4c4b !important;
      /* animation: completed 1.2s linear both  */
 }
 
@@ -559,7 +560,7 @@ nav ul {
 
 .editContainer input, textarea {
     background-color: inherit;
-    border: 1px  #b27e80 solid;
+    border: 1px  #000000 solid;
 }
 
 .buttonImgSaveAndCancel {
@@ -718,10 +719,6 @@ nav ul {
     filter: grayscale(100%);
 }
 
-.hoverButton:hover {
-    filter: none;
-}
-
 .shake {
     animation: shake 0.8s linear both;
 }
@@ -753,6 +750,24 @@ nav ul {
     90% {
         transform: translateX(-8px)
     }
+}
+
+.buttonRemove {
+    background-color: inherit;
+    border: 1px #000000 solid;
+    cursor: pointer;
+}
+
+.buttonRemove:hover {
+    background-color: #dfb9ba;
+}
+
+.date {
+    font-size: 1.6em;
+    text-align: center;
+    border-top: 1px #000000 solid;
+    margin: 0 8%;
+    padding: 8% 0;
 }
 
 @media (max-width: 766px) {

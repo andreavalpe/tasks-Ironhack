@@ -35,8 +35,13 @@ export const useTaskStore = defineStore("tasks", () => {
   };
 
   //función para editar tareas en supabase
-  const edited = async (title, description, color, date, id) => {
-    const { data, error } = await supabase.from("tasks").update({ title: title, description: description, color: color, date: date }).match({ id: id });
+  const edited = async (title, description, color, putDate, id) => {
+    const { data, error } = await supabase.from("tasks").update({ title: title, description: description, color: color, date: putDate }).match({ id: id });
+  };
+
+  //función para editar tareas en supabase
+  const editedNoData = async (title, description, color, id) => {
+    const { data, error } = await supabase.from("tasks").update({ title: title, description: description, color: color }).match({ id: id });
   };
 
   // borrar tareas de supabase
@@ -45,5 +50,5 @@ export const useTaskStore = defineStore("tasks", () => {
       id: id,
     });
   };
-  return { tasksArr, fetchTasks, addTask, deleteTask, toggleTask, edited };
+  return { tasksArr, fetchTasks, addTask, deleteTask, toggleTask, edited, editedNoData };
 });

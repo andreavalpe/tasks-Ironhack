@@ -8,8 +8,11 @@
         </div>
         <h3>{{ task.title }}</h3>
         <p>{{ task.description }}</p>
+        <div v-if= "task.date != null" class="date">
+            {{ europeanDate(task.date) }}
+        </div>
         <div v-if="!showEdit" class="buttonEditCheckDelete">
-            <button @click="showModal" class="delete backgroundButton hoverButton">
+            <button @click="showModal" class="delete backgroundButton">
                 <img class="buttonImg" src="../images/trashButton.png"/>
             </button>
             <button :id="'recoverColors' + task.id" @click="completeTask" class="completedButton backgroundButton">
@@ -21,7 +24,8 @@
         </div>
         <div v-if="showEdit" class="editContainer">
             <input type="color" v-model="selectedColor" @input="changeBackground"/> 
-            <input type ="date"/>
+            <input type ="date" v-model="putDate"/>
+            <button @click="deleteDate" class="buttonRemove"> Remove date </button>
             <input type="text" v-model="currentTitle" />
             <textarea rows="10" cols="50" v-model="currentDescription" />
             <div class="buttonEditCheckDelete">
@@ -76,12 +80,15 @@ const run = ref (false);
 
 const doIt = ref (false);
 
+// const done = ref(false);
+
 //se crea una variable para recuperar el color de la base de datos y se le concatena con el +# 
 let selectedColor = ref("#" + props.task.color);
 
 //definimos las variables para recuperar el título y la descripción de la tarea
 const currentTitle = ref("");
 const currentDescription = ref("");
+const putDate = ref(props.task.date);
 
 //definir dos variables una para recuperar el color y otra para la fecha
 let date = ref("");
@@ -103,16 +110,16 @@ const shake = () => {
 }
 
 //se crea una función para hacer un hover al completar la tarea
-const hoverButton = () => {
-    const recoverColors = document.getElementById ('recoverColors' + props.task.id);
-    recoverColors.classList.add ('hoverButton');
-}
+// const hoverButton = () => {
+//     const recoverColors = document.getElementById ('recoverColors' + props.task.id);
+//     recoverColors.classList.add ('hoverButton');
+// }
 
 //se agrega una función para cambiar el background del div
 const changeBackground = () => {
     const myDiv = document.getElementById('containerTask'+ props.task.id );
     myDiv.style.backgroundColor = selectedColor.value;
-    color.value = selectedColor.value;
+    // color.value = selectedColor.value;
 }
 
 //función para enseñar el modal al hacer click en delete
@@ -146,7 +153,7 @@ const completeTask = () => {
 
     shake();
 
-    hoverButton(); 
+    // done.value = !done.value;
 }
 
 //Hacemos una función para cambiar el valor booleano y así que no muestre el contenido de showEdit.
@@ -167,10 +174,47 @@ const editTask = () => {
 
 //se crea una función para actualizar el contenido de la tarea.
 const edited = () => {
-    taskStore.edited(currentTitle.value, currentDescription.value, color.value.slice(1), '2023-02-22', props.task.id);
+    // console.log(putDate.value);
+    // console.log (putDate.value)
+    // const dateForm = americanDate(putDate.value);
+    const dateForm = putDate;
+    console.log (dateForm)
+    if (dateForm === null || dateForm == null || dateForm === undefined || dateForm == undefined) {
+        // console.log('editedNoData');
+        taskStore.editedNoData(currentTitle.value, currentDescription.value, selectedColor.value.slice(1), props.task.id);
+    } else{
+        // console.log('edited');
+        taskStore.edited(currentTitle.value, currentDescription.value, selectedColor.value.slice(1), dateForm.value, props.task.id);
+    }
     showEdit.value = false;
 };
 
+//se crea una función para limpiar la fecha
+const deleteDate = () =>  {
+    putDate.value = null;
+}
+
+//se crea una función para ordenar la fecha al formato europeo 
+const europeanDate = (putDate) => {
+    if (putDate != null) {
+    const [year, month, day] = putDate.split('-');
+    // Crea la fecha en formato europeo
+    const europeanDate = `${day}-${month}-${year}`;
+    // Devuelve la fecha en formato europeo
+    return europeanDate;
+    }
+}
+
+//se crea una función para ordenar la fecha al formato americano
+const americanDate = (putDate) => {
+    if (putDate != null) {
+        const [day, month, year] = putDate.split('-');
+        // Crea la fecha en formato europeo
+        const americanDate = `${year}-${month}-${day}`;
+        // Devuelve la fecha en formato europeo
+        return americanDate;
+    }
+}
 //se crea una función para que enseñe un input color 
 
 const addColor = () => {
