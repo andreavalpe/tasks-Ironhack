@@ -56,7 +56,7 @@ Tener un archivo README.md bien estructurado y bien documentado también puede s
 
 ## Acerca del Proyecto
 
-Este proyecto trata de poner en práctica los conceptos aprendidos a través de vue.
+Este proyecto trata de poner en práctica los conceptos aprendidosen el bootcamp usando vue3.
 La idea ha sido seguir la dinámica de la web de ejemplo, dándole un estilo kawaii y friendly para que así sea más acogedor.
 
 <!-- La sección "sobre el proyecto" en un archivo README es una sección importante que proporciona información general sobre el objetivo y la funcionalidad del proyecto.
@@ -71,7 +71,7 @@ En esta sección se puede incluir información como:
 - Licencia del proyecto
 - Contribuciones de las personas en el proyecto.
 
-En resumen, la sección "sobre el proyecto" es una excelente manera de brindar a los usuarios y contribuidores una visión general del proyecto y proporcionarles toda la información necesaria para comenzar a trabajar con él. --> -->
+En resumen, la sección "sobre el proyecto" es una excelente manera de brindar a los usuarios y contribuidores una visión general del proyecto y proporcionarles toda la información necesaria para comenzar a trabajar con él. -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -84,7 +84,7 @@ En resumen, la sección "sobre el proyecto" es una excelente manera de brindar a
 - JavaScript: en este caso se ha usado el lenguaje para hacer funciones que recuperaran el api proporcionado (Json), manipularlo a través del dom para que la sección recent projects tanto del home como de cada proyecto individual mostrará las imágenes, información y textos rescatados, y también para hacerlo al revés, en otras palabras, enviar la información del formulario a un formato Json.
   Este lenguaje en concreto tampoco tiene limitaciones, ha dado la capacidad a través de funciones, loops, y otros de acceder a diferentes textos e imágenes siguiendo la lista o el parámetro pasado.
 
--Vue3: versión popular del framework de JavaScript Vue.js, diseñado para simplificar la creación de interfaces de usuario interactivas y reactivas en aplicaciones web.
+- Vue3: versión popular del framework de JavaScript Vue.js, diseñado para simplificar la creación de interfaces de usuario interactivas y reactivas en aplicaciones web.
 
 - Visual Studio Code: es el editor que me ha dado la capacidad de programar diferentes lenguajes, conectarlos, editarlos e ir probando como quedaban en la nube.
 
@@ -102,7 +102,7 @@ En esta sección se puede incluir información como:
 - Servicios en la nube utilizados (si corresponde)
 - Otros recursos o tecnologías relacionadas con el proyecto.
 
-En resumen, la sección "construido con" es una excelente manera de brindar a los usuarios y contribuidores una compresión de las tecnologías y herramientas utilizadas para desarrollar el proyecto, esto ayuda a entender mejor el proyecto y a los desarrolladores a contribuir de manera efectiva. --> -->
+En resumen, la sección "construido con" es una excelente manera de brindar a los usuarios y contribuidores una compresión de las tecnologías y herramientas utilizadas para desarrollar el proyecto, esto ayuda a entender mejor el proyecto y a los desarrolladores a contribuir de manera efectiva. -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,8 +116,6 @@ En resumen, la sección "construido con" es una excelente manera de brindar a lo
 
 En este punto accedemos a mi planteamiento diario para realizar cada punto del proyecto, enseñando las ideas previas y si se han cumplido o que se ha hecho durante estos días.
 
-#### Day One
-
 ###### Lunes 06, Febrero 2023
 
 - [x] Hacer clases repasando términos de vue.
@@ -126,13 +124,9 @@ En este punto accedemos a mi planteamiento diario para realizar cada punto del p
 
 - [x] Creación de una cuenta para que los usuarios se puedan registrar mediante un Sign Up, para iniciar sesión y cerrar sesión a través del Log In y Log Out.
 
-#### Day Two
-
 ###### Miércoles 08, Febrero 2023
 
 - [ ] Gestión de tareas para que los usuarios puedan crear, editar, eliminar y marcarlas como completadas o desmarcarlas.
-
-#### Day Three
 
 ###### Jueves 09, Febrero 2023
 
@@ -198,7 +192,7 @@ En resumen, la sección "sobre mí" es una excelente manera de brindar a los usu
 
 Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name) --> -->
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name) -->
 
 <!-- Presentation Link: [Insert here your presentation link](insert-link-here) -->
 
@@ -230,13 +224,13 @@ En esta sección se puede incluir información como:
 - Agradecimientos a instituciones o organizaciones que proporcionaron apoyo financiero o recursos.
 - Enlaces a proyectos o recursos relacionados que fueron útiles para el desarrollo del proyecto.
 
-En resumen, la sección "agradecimientos" es una excelente manera de agradecer a las personas o instituciones que ayudaron en el desarrollo del proyecto. Esta sección también puede ser útil para dar crédito a los recursos o proyectos relacionados que fueron útiles durante el desarrollo. --> -->
+En resumen, la sección "agradecimientos" es una excelente manera de agradecer a las personas o instituciones que ayudaron en el desarrollo del proyecto. Esta sección también puede ser útil para dar crédito a los recursos o proyectos relacionados que fueron útiles durante el desarrollo. -->
 
 - [Google Font Libraries](https://fonts.googleapis.com/css2?family=Chewy&display=swap)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Desafío Técnico
+## Desafío Técnico + Grande Error
 
 <!-- La sección "desafío técnico" aunque no es convencional en un proyecto profesional, en nuestro curso dependemos de esta sección en un archivo README para proporcionar información sobre los desafíos técnicos que se enfrentaron durante el desarrollo del proyecto.
 
@@ -247,9 +241,9 @@ En esta sección se puede incluir información como:
 - Aspectos del proyecto que aún son un desafío o que requieren mejora continua.
 - Recomendaciones para futuros desarrolladores que trabajen en el proyecto.
 
-En resumen, la sección "desafío técnico" es una excelente manera de brindar a los usuarios y contribuidores una idea de los desafíos técnicos que se enfrentaron durante el desarrollo del proyecto, y cómo se abordaron. Esta sección también puede ser útil para futuros desarrolladores que trabajen en el proyecto, ya que les brinda información valiosa sobre problemas potenciales y soluciones para superarlos. --> -->
+En resumen, la sección "desafío técnico" es una excelente manera de brindar a los usuarios y contribuidores una idea de los desafíos técnicos que se enfrentaron durante el desarrollo del proyecto, y cómo se abordaron. Esta sección también puede ser útil para futuros desarrolladores que trabajen en el proyecto, ya que les brinda información valiosa sobre problemas potenciales y soluciones para superarlos. -->
 
-## Grande Error
+<!-- ##Grande Error -->
 
 <!-- La sección "grande error" en un archivo README es una sección opcional que proporciona información sobre los errores importantes cometidos durante el desarrollo del proyecto.
 
@@ -260,4 +254,4 @@ En esta sección se puede incluir información como:
 - Soluciones implementadas para corregir el error.
 - Lecciones aprendidas y recomendaciones para evitar errores similares en el futuro.
 
-En resumen, la sección "grande error" es una forma de ser transparente sobre los errores cometidos durante el desarrollo del proyecto. También puede ser útil para otros desarrolladores que trabajen en el proyecto, ya que les brinda información valiosa sobre problemas potenciales y cómo se abordaron. --> -->
+En resumen, la sección "grande error" es una forma de ser transparente sobre los errores cometidos durante el desarrollo del proyecto. También puede ser útil para otros desarrolladores que trabajen en el proyecto, ya que les brinda información valiosa sobre problemas potenciales y cómo se abordaron. -->
