@@ -718,6 +718,10 @@ nav ul {
     filter: grayscale(100%);
 }
 
+.hoverButton:hover {
+    filter: none;
+}
+
 .shake {
     animation: shake 0.8s linear both;
 }

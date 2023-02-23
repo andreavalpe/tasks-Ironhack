@@ -9,13 +9,13 @@
         <h3>{{ task.title }}</h3>
         <p>{{ task.description }}</p>
         <div v-if="!showEdit" class="buttonEditCheckDelete">
-            <button @click="showModal" class="delete backgroundButton">
+            <button @click="showModal" class="delete backgroundButton hoverButton">
                 <img class="buttonImg" src="../images/trashButton.png"/>
             </button>
-            <button @click="completeTask" class="completedButton backgroundButton">
+            <button :id="'recoverColors' + task.id" @click="completeTask" class="completedButton backgroundButton">
                 <img class="buttonImg" src="../images/checkButton.png"/>
             </button>
-            <button @click ="editTask" :class="{buttonPencil: run, shake: doIt, edit:true, backgroundButton: true}">
+            <button :id="'shake' + task.id" @click ="editTask" :class="{buttonPencil: run, edit:true, backgroundButton: true}">
                 <img class="buttonImg" src="../images/pencilButton.png"/>
             </button>
         </div>
@@ -69,7 +69,7 @@ const isComplete = ref(props.task.is_complete);
 //creamos una variable para darle un valor booleano, que en este caso lo definiremos falso para que no muestre el contenido de los input.
 let showEdit = ref(false);
 
-//se crean  variables para definir valores booleanicos para enseñar o no contenidos
+//se crean variables para definir valores booleanicos para enseñar o no contenidos
 const modal = ref(false);
 
 const run = ref (false);
@@ -90,6 +90,23 @@ let color = ref("");
 const props = defineProps({
     task: Object,
 });
+
+//se crea una función para hacer un shake al darle al botón
+const shake = () => {
+    const button = document.getElementById('shake' + props.task.id);
+    button.addEventListener("click", function () {
+        button.classList.add("shake");
+        setTimeout(function () {
+            button.classList.remove("shake");
+        }, 820);
+    });
+}
+
+//se crea una función para hacer un hover al completar la tarea
+const hoverButton = () => {
+    const recoverColors = document.getElementById ('recoverColors' + props.task.id);
+    recoverColors.classList.add ('hoverButton');
+}
 
 //se agrega una función para cambiar el background del div
 const changeBackground = () => {
@@ -124,11 +141,18 @@ const completeTask = () => {
     taskStore.toggleTask(isComplete.value, props.task.id);
 
     run.value = !run.value;
+
+    doIt.value = !doIt.value;
+
+    shake();
+
+    hoverButton(); 
 }
 
 //Hacemos una función para cambiar el valor booleano y así que no muestre el contenido de showEdit.
 const cancelEdit = () => {
-    showEdit.value = false;
+    selectedColor.value = "#" + props.task.color;
+    showEdit.value = false; 
 };
 
 
@@ -138,14 +162,12 @@ const editTask = () => {
     showEdit.value = true;
     currentTitle.value = props.task.title;
     currentDescription.value = props.task.description;
-}   else {
-    doIt.value = !doIt.value;
-}  
+} 
 };
 
 //se crea una función para actualizar el contenido de la tarea.
 const edited = () => {
-    taskStore.edited(currentTitle.value, currentDescription.value, color.value.slice(1), props.task.id);
+    taskStore.edited(currentTitle.value, currentDescription.value, color.value.slice(1), '2023-02-22', props.task.id);
     showEdit.value = false;
 };
 

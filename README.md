@@ -137,6 +137,10 @@ En este punto accedemos a mi planteamiento diario para realizar cada punto del p
 
 - [x] Ver vídeos de vue para intentar implementar cosas nuevas.
 
+###### Jueves 23, Febrero 2023
+
+- [x] Perfeccionar, hacer el readme, la presentación y ver que todo funciona.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Acerca de mi -->

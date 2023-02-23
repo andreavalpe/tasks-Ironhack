@@ -62,7 +62,7 @@ const addTask = () => {
 } else {
   // Aquí mandamos los valores a la store para crear la nueva Task. Esta parte de la función tenéis que refactorizarla para que funcione con emit y el addTask del store se llame desde Home.vue.
     
-  taskStore.addTask(name.value, description.value);
+  taskStore.addTask(name.value, description.value, 'fcd3d5');
   name.value = '';
   description.value = '';
 }
