@@ -136,6 +136,8 @@ En este punto accedemos a mi planteamiento diario para realizar cada punto del p
 
 - [ ] Seguir con el css.
 
+---
+
 ###### Lunes 20, Febrero 2023
 
 - [x] Acabar toda la lógica.
@@ -231,6 +233,9 @@ En resumen, la sección "agradecimientos" es una excelente manera de agradecer a
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Desafío Técnico + Grande Error
+
+Esta vez he decidido poner estos apartados juntos porque van un poco de la mano.
+El gran desafío ha sido en general vue3 aclararme donde usar los componentes, importarlos, etc. Ta
 
 <!-- La sección "desafío técnico" aunque no es convencional en un proyecto profesional, en nuestro curso dependemos de esta sección en un archivo README para proporcionar información sobre los desafíos técnicos que se enfrentaron durante el desarrollo del proyecto.
 
