@@ -235,7 +235,16 @@ En resumen, la sección "agradecimientos" es una excelente manera de agradecer a
 ## Desafío Técnico + Grande Error
 
 Esta vez he decidido poner estos apartados juntos porque van un poco de la mano.
-El gran desafío ha sido en general vue3 aclararme donde usar los componentes, importarlos, etc. Ta
+
+Al principio del proyecto vue3 fue un gran desafío y aunque poco a poco fui practicando y entendiéndolo mejor, enfrentarme a él fue frustrante.
+
+La primera semana y cuando enseñaron el proyecto me sentí un poco abrumada, quería empezar, pero no sabía cómo, así que dediqué ese tiempo en ver un curso para intentar avanzar. Al final era un poco luchar contra mi frustración y seguir intentándolo, por eso creo que mi error fue y mi gran desafío fue mi propia mente para enfrentarme al reto. No obstante, conseguí avanzar, ir aprendiendo y aclararme como se hacían las cosas y hacer el proyecto.
+
+Cada día tenía una idea nueva y buscaba como implementarla, eso también me alejaba de lo básico del proyecto, pero quería hacer algo que me diferenciara, ya que, nos habían dado más libertad de diseño y de funcionalidades. También pensaba en que querría yo como usuario o que podía tener mi web que no tuvieran las to do list habituales, y aunque por tiempo no he podido implementar todo, he hecho pequeñas cositas que, aunque sí que la puedan hacer otras webs me gustan los resultados.
+
+Si que es verdad que sigo con el curso de vue3 para repasar y reforzar el aprendizaje, porque, aunque la practica me haya ayudado, tuvimos un poco de ayuda de los docentes en la base del proyecto y me hubiera gustado enfrentarme totalmente sola a ello.
+
+Lo que me he demostrado a mí misma es que existe la frustración pero que debemos seguir, buscando información, cursos, y no dejar que la mente nos gane y nos pare, también que he mejorado comparándolo con mi otro proyecto, ya sea, usando medidas para hacer más fácil el responsive, centrando mejor las cosas, y mejorando un poco el approach. Así que ha sido un desafío pero estoy contenta de haber seguido indagando para entenderlo mejor y así aprender más del framework.
 
 <!-- La sección "desafío técnico" aunque no es convencional en un proyecto profesional, en nuestro curso dependemos de esta sección en un archivo README para proporcionar información sobre los desafíos técnicos que se enfrentaron durante el desarrollo del proyecto.
 
